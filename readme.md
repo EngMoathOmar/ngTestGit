@@ -6,3 +6,5 @@ this will cause a conflict with the remote from me !
 
 
 Final commited / Agreed Version .
+
+could we recover that ? 
