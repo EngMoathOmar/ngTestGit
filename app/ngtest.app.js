@@ -6,16 +6,12 @@ angular
   .config(function($stateProvider, $urlRouterProvider) {
 	  //
 	  // For any unmatched url, redirect to /state1
-	  $urlRouterProvider.otherwise("/home");
+	  $urlRouterProvider.otherwise("/students");
 	  //
 	  // Now set up the states
 	 $stateProvider
-    .state('home', {
-        url:"/home",
-         templateUrl: 'ngtestgit/partials/home.html'
-    })
      .state('students', {
-         url:"/students/myownstudetnts/mstrx/yyy/students",
+         url:"/students",
          templateUrl: 'ngtestgit/partials/students.html',
          controller:"StudentsController",
          controllerAs : "StudentsCtrl"
