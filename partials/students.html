@@ -1,16 +1,62 @@
-<div class="row">
-    <div class="col-sm-6">Students List
 
-		<table class="table table-stripped table-hover">
-            <tr  ng-repeat="student in StudentsCtrl.ctrlStudents">
-	            <td ng-click="clickHandler(student)"> {{student.name}}
-	            </td>
-	            <td> 
-	            	{{student.age}}
-	            </td>
-            <tr>
-        </table>
-        
+ <div class="row">
+    <div class="col-sm-6">
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Students List</h1>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <table class="table table-stripped table-hover">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th> Name </th>
+                            <th> Age </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="student in StudentsCtrl.ctrlStudents" ng-click="clickHandler(student)">
+                           <td>{{$index+1}}</td>
+                            <td> 
+                                {{student.name}}
+                            </td>
+                            <td>
+                                {{student.age}}
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
-    <div class="col-sm-6"> Student Detail ...</div>
-</div>
+    <div class="col-sm-6">
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <h1>... Student Detail ...</h1>
+                <hr class="hr">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <dl ng-if="selectedStudent">
+                    <dt>Name </dt>
+                    <dd>{{selectedStudent.name}}</dd>
+                    <dt>Age </dt>
+                    <dd>{{selectedStudent.age}}</dd>
+                    <dt> Detail Text</dt>
+                    <dd>{{selectedStudent.detail}}</dd>
+                </dl>
+
+                <div ng-if="!selectedStudent" class="text-center">
+                    <h4> Please Select A Student From the Table "just Click on it :)" </h4>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div> 
