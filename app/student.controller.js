@@ -34,7 +34,7 @@ function StudentsController($scope){
     this.ctrlStudents = students;
     
     $scope.clickHandler = function clickHandler(student){
-        alert(student.age);        
+        $scope.selectedStudent =  angular.copy(student);       
     }
     
 }
