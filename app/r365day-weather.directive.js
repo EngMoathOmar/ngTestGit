@@ -44,8 +44,7 @@ function r365DayWeatherDirective(){
     };
     
     function r365DayWeatherLinkFunction($scope){
-    
-     
+             
     }
     
     function r365DayWeatherController(){
