@@ -3,7 +3,7 @@ angular
 .controller("StudentsController",StudentsController);
 
 function StudentsController($scope){
-    
+    //edit from github
     var students = [{
         name:"mstr x ",
         age:"10",
@@ -32,7 +32,7 @@ function StudentsController($scope){
     
     $scope.studentsList = students;
     this.ctrlStudents = students;
-    
+    //another edit from github
     $scope.clickHandler = function clickHandler(student){
         $scope.selectedStudent =  angular.copy(student);       
     }
